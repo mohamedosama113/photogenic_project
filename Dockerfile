@@ -5,7 +5,7 @@ FROM centos/httpd
 LABEL project=photogenic
 ####
 # Copy website files to the Apache document root
-ADD photogenic.zip /var/www/html/
+COPY photogenic.zip /var/www/html/
 WORKDIR /var/www/html
 RUN yum install -y unzip && unzip photogenic.zip && rm photogenic.zip
 # Expose port 80
